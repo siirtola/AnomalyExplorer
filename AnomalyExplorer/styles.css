@@ -1,0 +1,145 @@
+
+
+body {
+  background-color: #d6d9df
+}
+
+.table {
+  display: table;
+}
+
+.row {
+  display: table-row;
+}
+
+.cell {
+  display: table-cell;
+}
+
+/* hs 26.11.2014 */
+h1 {
+    margin-top: 20px;
+    color:blue;
+    font-family:verdana;
+    font-size:140%;
+}
+
+/* hs 26.11.2014 */
+h2 {
+    margin-top: 25px;
+    color:blue;
+    font-family:verdana;
+    font-size:100%;
+}
+
+
+/*
+ * FILE INPUT
+ */
+#fileInputView {
+
+}
+
+/*
+ * SUMMARY
+ */
+#summaryView {
+  display: table;
+}
+
+/*
+ * THRESHOLD INPUT
+ */
+#thresholdValuesView {
+  margin-top: 15px;
+  display: table;
+}
+
+.thresholdInput {
+  display: table-cell;
+}
+
+.thresholdCheckbox {
+
+}
+
+.thresholdInputLabel {
+
+}
+
+.cbLabel {
+  display: inline-block;
+  width: 170px;
+}
+#noiseCBLabel {background-color: rgba(193, 193, 193, 0.51);}
+#lowCBLabel {background-color: rgba(255, 0, 0, 0.43);}
+#middleCBLabel {background-color: rgba(255, 102, 0, 0.43);}
+#platformCBLabel {background-color: rgba(13, 82, 220, 0.35);}
+#multipleCBLabel {background-color: rgba(153, 153, 0, 0.43);}
+#bottomCBLabel {background-color: rgba(113, 190, 162, 0.43);}
+#irregularCBLabel {background-color: rgba(172, 92, 172, 0.27);}
+
+.thresholdSlider {
+  width: 170px;
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.sliderLabel {
+  width: 70px;
+  display: inline-block;
+  text-align: center;
+}
+
+#resetValues {
+  margin-left: 0px;
+  margin-top: 10px;
+}
+
+/*
+ * GRAPHS
+ */
+.graphDiv {
+  display: block;
+}
+#numberOfGraphs {
+  margin-top: 15px;
+  width: 30px;
+}
+.graphSelect {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+/* hs 26.11.2014 */
+.listView {
+  margin-top: 15px;
+  width: 390px;
+  height: 300px;
+  font-family: "Courier New", Courier, sans-serif;
+}
+
+
+#exportView {
+  margin-top: 25px;
+}
+
+/* hs 26.11.2014 */
+#percentageView {
+  margin-top: 25px;
+}
+
+/* hs 26.11.2014 */
+#export {
+  width: 850px;
+  height: 400px;
+  font-family: "Courier New", Courier, sans-serif;
+}
+/* hs 26.11.2014 */
+#percentage {
+  width: 850px;
+  height: 400px;
+  font-family: "Courier New", Courier, sans-serif;
+}

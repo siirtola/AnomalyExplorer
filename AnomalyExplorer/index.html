@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" type="text/css"/>
+    <script src="jquery-2.1.1.js"></script>
+    <!-- jquery-ui + css for sliders -->
+    <link rel="stylesheet" href="jquery-ui/jquery-ui-1.10.4.custom-slider.css" type="text/css"/>
+    <script src="jquery-ui/jquery-ui-1.10.4.custom.js"></script>
+    
+    <script src="datamodel.js"></script>
+    <script src="ui_components.js"></script>
+    <script src="graphs.js"></script>
+    <script src="summary.js"></script>
+    
+    <title>AnomalyExplorer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  
+  <h1>AnomalyExplorer v1.5</h1>
+  
+  <body>
+    <div id ="fileInputView">
+      <input type="file" multiple id="inputFiles" >
+    </div>
+    
+    <div id="summaryView" class="topLevelView">
+      <div class="row">
+        <div class="cell"><canvas id="summaryBySignal"></canvas></div>
+        <div class="cell"><canvas id="totalSummary"></canvas></div>
+      </div>
+    </div>
+    
+    <div id="thresholdValuesView">
+      <div class="table">
+      
+      <div class="row">
+        <div class="thresholdInput">
+          <div id="noiseCBLabel" class="cbLabel">
+            <input type="checkbox" id="noiseCheckbox" class="thresholdCheckbox" checked>
+            <label for="noiseCheckbox" class="thresholdInputLabel">Noise ratio</label>
+          </div>
+          <div id="noiseSlider" class="thresholdSlider"></div>
+          <span id="noiseSliderLabel" class="sliderLabel"></span>
+        </div>
+      
+          <div class="thresholdInput">
+          <div id="oscillationCBLabel" class="cbLabel">
+            <input type="checkbox" id="oscCheckbox" class="thresholdCheckbox" checked>
+            <label for="oscCheckbox" class="thresholdInputLabel">Oscillation</label>
+          </div>
+          <div id="oscSlider" class="thresholdSlider"></div>
+          <span id="oscSliderLabel" class="sliderLabel"></span>
+        </div>
+      </div>
+        
+      <div class="row">
+        <div class="thresholdInput">
+          <div id="lowCBLabel" class="cbLabel">
+            <input type="checkbox" id="lowCheckbox" class="thresholdCheckbox" checked>
+            <label for="lowCheckbox"  class="thresholdInputLabel">Low peak</label>
+          </div>
+          <div id="lowSlider" class="thresholdSlider"></div>
+          <span id="lowSliderLabel" class="sliderLabel"></span>
+        </div>
+        <div class="thresholdInput">
+          <div id="multipleCBLabel" class="cbLabel">
+            <input type="checkbox" id="multipleCheckbox" class="thresholdCheckbox" checked>
+            <label for="multipleCheckbox" class="thresholdInputLabel">Double peak</label>
+          </div>
+          <div id="multipleSlider" class="thresholdSlider"></div>
+          <span id="multipleSliderLabel" class="sliderLabel"></span>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="thresholdInput">
+          <div id="middleCBLabel" class="cbLabel">
+            <input type="checkbox" id="middleCheckbox" class="thresholdCheckbox" checked>
+            <label for="middleCheckbox" class="thresholdInputLabel">Middle peak</label>
+          </div>
+          <div id="middleSlider" class="thresholdSlider"></div>
+          <span id="middleSliderLabel" class="sliderLabel"></span>
+        </div>
+        <div class="thresholdInput">
+          <div id="irregularCBLabel" class="cbLabel">
+            <input type="checkbox" id="irregularCheckbox" class="thresholdCheckbox" checked>
+            <label for="irregularCheckbox" class="thresholdInputLabel">Irregular phase</label>
+          </div>
+          <div id="irregularSlider" class="thresholdSlider"></div>
+          <span id="irregularSliderLabel" class="sliderLabel"></span>
+        </div>    
+            <!--
+        <div class="thresholdInput">
+          <div id="bottomCBLabel" class="cbLabel">
+            <input type="checkbox" id="bottomCheckbox" class="thresholdCheckbox" checked>
+            <label for="bottomCheckbox" class="thresholdInputLabel">Bottom peaks</label>
+          </div>
+          <div id="bottomSlider" class="thresholdSlider"></div>
+          <span id="bottomSliderLabel" class="sliderLabel"></span>
+        </div>
+            -->
+      </div>
+
+      <div class="row">
+        <div class="thresholdInput">
+          <div id="platformCBLabel" class="cbLabel">
+            <input type="checkbox" id="platformCheckbox" class="thresholdCheckbox" checked>
+            <label for="platformCheckbox" class="thresholdInputLabel">Plateau abnormality</label>
+          </div>
+          <div id="platformSlider" class="thresholdSlider"></div>
+          <span id="platformSliderLabel" class="sliderLabel"></span>
+        </div>
+          <!--
+        <div class="thresholdInput">
+          <div id="irregularCBLabel" class="cbLabel">
+            <input type="checkbox" id="irregularCheckbox" class="thresholdCheckbox" checked>
+            <label for="irregularCheckbox" class="thresholdInputLabel">Irregular phase</label>
+          </div>
+          <div id="irregularSlider" class="thresholdSlider"></div>
+          <span id="irregularSliderLabel" class="sliderLabel"></span>
+        </div>    
+          -->
+      </div>
+      </div>
+      <button id="resetValues">Reset values</button>
+    </div>
+    
+    
+    <div id="graphicSignalView">
+      <label for="numberOfGraphs">Number of signal graphs:</label>
+      <input type="number" id="numberOfGraphs" min="1" max="5" value="1">
+    </div>
+    
+    <h2>Lists of regular and abnormal signals</h2>
+      
+    <div id="signalListView">
+      <textarea readonly id="normalList" class="listView"></textarea>
+      <textarea readonly id="abnormalList" class="listView"></textarea>
+    </div>
+     
+    <h2>Summary of anomaly counts</h2>
+    
+    <div id="exportView"> 
+      <textarea readonly id="export"></textarea>
+    </div>
+ 
+    <h2>Summary of anomaly coverages</h2>
+
+    <div id="percentageView"> 
+      <textarea readonly id="percentage"></textarea>
+    </div>
+    
+    
+  </body>
+</html>
