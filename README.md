@@ -13,7 +13,7 @@ Basically, AE is a one-page web application implemented mainly in JavaScript. It
 
 ## Documentation
 
-Currently, the only documentation is the accepted PLOS-One article which will be added here once published. The distribution contains example data files demonstrating the anomaly types that can be detected with AE.
+Currently, the only documentation is the [PLOS-One article](https://doi.org/10.1371/journal.pone.0135806). The distribution contains example data files demonstrating the anomaly types that can be detected with AE.
 
 ## Installation
 
