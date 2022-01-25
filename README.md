@@ -26,7 +26,7 @@ Files include test dataset which can be uploaded to AE from “Choose files” f
 ## Contact
 
 * For questions related to biomedical aspects of AE, please
-contact Kirsi Penttinen, kirsi.penttinen@uta.fi
+contact Kirsi Penttinen, kirsi.penttinen@tuni.fi
 
 * For questions related to technological aspects of AE, 
-please contact Harri Siirtola, harri.siirtola@uta.fi
+please contact Harri Siirtola, harri.siirtola@tuni.fi
